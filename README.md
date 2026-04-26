@@ -41,14 +41,42 @@ python gumshoe.py jsmith --mock --output ./cases --json
 
 Python 3.10+ is required.
 
+### 1) Create and activate a virtual environment
+
+#### macOS / Linux
+
 ```bash
-pip install -r requirements.txt
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
 ```
 
-To install as a CLI command globally:
+#### Windows (PowerShell)
+
+```powershell
+py -3 -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+```
+
+#### Windows (cmd.exe)
+
+```bat
+py -3 -m venv .venv
+.venv\Scripts\activate.bat
+python -m pip install --upgrade pip
+```
+
+### 2) Install project dependencies
 
 ```bash
-pip install -e .
+python -m pip install -r requirements.txt
+```
+
+### 3) (Optional) Install as a CLI command in your environment
+
+```bash
+python -m pip install -e .
 gumshoe jsmith --mock
 ```
 
